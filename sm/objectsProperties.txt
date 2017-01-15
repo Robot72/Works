@@ -151,3 +151,66 @@ mysql> select kmotminska
 |         14 |
 |         15 |
 --------------
+
+mysql> select uroven
+    -> from object
+    -> group by uroven;
++--------+
+| uroven |
++--------+
+| NULL   |
+| 1      |
+| 2      |
+| 2БЛ    |
+| 3      |
+| 4      |
++--------+
+
+mysql> select is_vip
+    -> from object
+    -> group by is_vip;
++--------+
+| is_vip |
++--------+
+|   NULL |
+|      1 |
++--------+
+
+mysql> select vodoem
+    -> from object
+    -> group by vodoem;
++----------+
+| vodoem   |
++----------+
+| NULL     |
+| есть     |
++----------+
+
+mysql> select les
+    -> from object
+    -> group by les
+    -> ;
++----------+
+| les      |
++----------+
+| NULL     |
+| есть     |
++----------+
+2 rows in set (0.00 sec)
+
+mysql> select krysha
+    -> from object
+    -> group by krysha
+    -> ;
++----------------------------+
+| krysha                     |
++----------------------------+
+| NULL                       |
+| андулин                    |
+| железо                     |
+| катепал                    |
+| мет.черепица               |
+| мягк. черепица             |
+| черепица                   |
+| шифер                      |
++----------------------------+
