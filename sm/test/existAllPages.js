@@ -12,7 +12,7 @@ describe('Server test', () => {
     function makeTest(path) {
 
       let options = {
-        hostname: 'q-store.uk.armtek.local',
+        hostname: '',
         port: 80,
         path: path,
         method: 'GET',
