@@ -1,5 +1,3 @@
-m2by@vh54 [~]# cd modules/unloader/components/
-m2by@vh54 [~/modules/unloader/components]# cat KufarComponent.php
 <?php
 
 namespace app\modules\unloader\components;
