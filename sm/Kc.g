@@ -4,14 +4,6 @@ namespace app\modules\unloader\components;
 
 use Yii;
 
-cla
-      
-<?php
-
-namespace app\modules\unloader\components;
-
-use Yii;
-
 class KufarComponent
 {
         private $models;
