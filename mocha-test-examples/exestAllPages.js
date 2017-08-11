@@ -4,14 +4,14 @@ let addresses = require('./addresses.js').addresses;
 
 describe('Server test', () => {
 
-  context('Существование страниц', () => {
+  context('Pages are exists', () => {
 
-    // this.timeout(15000); /* Максимальный таймаут */
+    // this.timeout(15000); /* Max timeout */
 
     function makeTest(path) {
 
       let options = {
-        hostname: 'q-store.uk.armtek.local',
+        hostname: 'host',
         port: 80,
         path: path,
         method: 'GET',
@@ -29,7 +29,7 @@ describe('Server test', () => {
         }
       };
 
-      it('Cтраница [' + options.path + '] возвращает статус 200', function (done) {
+      it('Server [' + options.path + '] response status 200', function (done) {
         http.get(options, ( response ) => {
           assert.equal(200, response.statusCode);
           done();
@@ -42,9 +42,9 @@ describe('Server test', () => {
       makeTest(addresses[item]);
     };
 
-    /** Отчеты **/
+    /** ? **/
 /*
-    it('Cтраница [' + options.path + '] возвращает статус 200', function (done) {
+    it('Server [' + options.path + '] response status 200', function (done) {
       http.get(options, ( response ) => {
         assert.equal(200, response.statusCode);
         done();
