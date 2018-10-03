@@ -1,0 +1,63 @@
+button.crm-webform-submit-button {
+    color: #FFFFFF !important;
+    background: #007bff !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    user-select: none !important;
+    border: 1px solid transparent !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+    border-radius: 5px !important;
+    font-weight: 400 !important;
+    text-transform: none;
+    font-size: 1.4em;
+}
+
+.crm-webform-wrapper {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+}
+
+#bx_form_iframe_8 {
+    height: 450px !important;
+}
+
+.crm-webform-agreement-modifier .crm-webform-checkbox-name {
+    font-size: 8px !important;
+}
+
+.crm-webform-label {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto !important;
+    font-size: 0.9em !important;
+}
+
+.crm-webform-header {
+    margin: 0px 0 0px 0;
+    padding: 0!important;
+    font: bold 1.2em;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+    text-transform: none;
+    color: #333;
+    text-align: center;
+}
+
+.crm-webform-fieldset-footer {
+    padding: 0 !important;
+}
+
+.crm-webform-main-container {
+    width: auto !important;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto, Arial !important;
+}
+
+.crm-webform-input {
+    color: #495057 !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 0.5rem !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+}
+
+.b24-widget-button-position-bottom-right {
+    right: 5px;
+    bottom: 5px;
+}
