@@ -1,0 +1,31 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /vagrant/webroot/yourWebsite.com/public_html; #Вместо yourWebsite.com вствить папку с моим проектом
+        index index.php;
+        server_name yourWebsite.com www.yourWebsite.com; #Вместо yourWebsite.com вствить домен, по которому вы будете искать проект, например new-website.dev
+
+        location / {
+                index  index.html index.php;
+                try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+        #
+        #       # With php7.0-cgi alone:
+        #       fastcgi_pass 127.0.0.1:9000;
+        #       # With php7.0-fpm:
+                fastcgi_pass unix:/run/php/php7.0-fpm.sock; # Ссылаемся на установленную версию в системе
+        }
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        location ~ /\.ht {
+                deny all;
+        }
+}
