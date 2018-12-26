@@ -1,0 +1,41 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /vagrant/webroot/novelodge-wordpress; // novelodge-wordpress - заменить на твою попку проетка
+        index index.php;
+        server_name nwp.dev www.nwp.dev;
+
+        location / {
+                index  index.html index.php;
+                try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+        #
+        #       # With php7.0-cgi alone:
+        #       fastcgi_pass 127.0.0.1:9000;
+        #       # With php7.0-fpm:
+                fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        }
+
+        location ~* ^.+\.(js|css)$ {
+            #old style: add_header Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre-check=0";
+            #old style: add_header Pragma "no-cache";
+            expires -1;
+            sendfile off; #if you're using virtualbox (it is not about cache, but you will need it) https://www.vagrantup.com/docs/synced-folders/virtualbox.html
+        }
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        location ~ /\.ht {
+                deny all;
+        }
+        
+        client_max_body_size 16M;
+}
+
